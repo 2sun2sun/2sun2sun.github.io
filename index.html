@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>썬트리 워크샵</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&family=Noto+Serif+KR:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="index-body">
+
+  <!-- HEADER -->
+  <header class="index-header">
+    <a href="index.html" class="index-header-title" aria-label="메인으로 이동">piece</a>
+    <a href="index.html" class="index-header-home" aria-label="홈">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 14.5L16 5l11.5 9.5" />
+        <path d="M7.5 13.5V27h17V13.5" />
+        <path d="M13 27v-8h6v8" />
+      </svg>
+    </a>
+  </header>
+
+  <!-- CANVAS -->
+  <div class="canvas">
+
+    <!-- 1. Editorial — Open Book -->
+    <a href="project-editorial.html" class="icon-item item-1" data-id="editorial" aria-label="종이의 결">
+      <svg viewBox="0 0 160 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M80,162 C57,150 24,148 9,153 L9,36 C24,30 57,32 80,45 Z" fill="#edeae3" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="M80,162 C103,150 136,148 151,153 L151,36 C136,30 103,32 80,45 Z" fill="#e7e3dc" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/>
+        <line x1="80" y1="45" x2="80" y2="162" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- left page lines -->
+        <line x1="21" y1="66" x2="70" y2="64" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="21" y1="77" x2="70" y2="76" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="21" y1="88" x2="70" y2="87" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="21" y1="99" x2="54" y2="99" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="21" y1="115" x2="70" y2="114" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="21" y1="126" x2="70" y2="125" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="21" y1="137" x2="47" y2="137" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <!-- right page lines -->
+        <line x1="90" y1="64" x2="139" y2="66" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="90" y1="76" x2="139" y2="77" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="90" y1="87" x2="139" y2="88" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="90" y1="99" x2="122" y2="99" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="90" y1="114" x2="139" y2="115" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="90" y1="125" x2="139" y2="126" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+        <line x1="90" y1="137" x2="115" y2="137" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
+      </svg>
+    </a>
+
+    <!-- 2. Branding — Hanging Shop Sign -->
+    <a href="project-branding.html" class="icon-item item-2" data-id="branding" aria-label="느린 상점">
+      <svg viewBox="0 0 160 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- wall bracket -->
+        <line x1="0" y1="28" x2="85" y2="28" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+        <line x1="0" y1="18" x2="0" y2="48" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M0,48 Q32,48 32,28" stroke="#111" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <!-- hanging strings -->
+        <line x1="48" y1="28" x2="40" y2="58" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="112" y1="28" x2="120" y2="58" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
+        <!-- sign board -->
+        <rect x="28" y="58" width="104" height="82" rx="4" fill="#edeae3" stroke="#111" stroke-width="1.4"/>
+        <rect x="35" y="65" width="90" height="68" rx="2" stroke="#111" stroke-width="0.8"/>
+        <!-- sign lines -->
+        <line x1="50" y1="86" x2="110" y2="86" stroke="#aaa" stroke-width="1" stroke-linecap="round"/>
+        <line x1="54" y1="99" x2="106" y2="99" stroke="#aaa" stroke-width="1" stroke-linecap="round"/>
+        <line x1="58" y1="112" x2="102" y2="112" stroke="#aaa" stroke-width="1" stroke-linecap="round"/>
+        <!-- tassels -->
+        <line x1="53" y1="140" x2="51" y2="162" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="80" y1="140" x2="80" y2="165" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="107" y1="140" x2="109" y2="162" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="51" cy="165" r="3.5" fill="#111"/>
+        <circle cx="80" cy="168" r="3.5" fill="#111"/>
+        <circle cx="109" cy="165" r="3.5" fill="#111"/>
+      </svg>
+    </a>
+
+    <!-- 3. Photography — Vintage Camera -->
+    <a href="project-photo.html" class="icon-item item-3" data-id="photo" aria-label="빛이 닿는 곳">
+      <svg viewBox="0 0 170 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- body -->
+        <rect x="10" y="55" width="150" height="100" rx="8" fill="#edeae3" stroke="#111" stroke-width="1.4"/>
+        <!-- top plate + pentaprism -->
+        <path d="M44,55 L44,40 L56,26 L114,26 L126,40 L126,55 Z" fill="#e4e1da" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/>
+        <!-- hot shoe -->
+        <line x1="68" y1="26" x2="102" y2="26" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+        <!-- lens outer -->
+        <circle cx="85" cy="107" r="38" stroke="#111" stroke-width="1.4"/>
+        <!-- lens mid -->
+        <circle cx="85" cy="107" r="29" stroke="#111" stroke-width="1.2"/>
+        <!-- lens glass -->
+        <circle cx="85" cy="107" r="20" fill="#ccc9c3" stroke="#111" stroke-width="1.2"/>
+        <!-- lens reflection -->
+        <path d="M74,97 Q77,93 83,95" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+        <!-- viewfinder -->
+        <rect x="18" y="36" width="22" height="14" rx="2" fill="#aaa9a4" stroke="#111" stroke-width="1.2"/>
+        <!-- shutter -->
+        <circle cx="120" cy="39" r="7.5" fill="#c8c4be" stroke="#111" stroke-width="1.3"/>
+        <!-- film advance -->
+        <rect x="133" y="52" width="20" height="10" rx="2" fill="#ddd9d2" stroke="#111" stroke-width="1"/>
+        <line x1="138" y1="52" x2="138" y2="62" stroke="#111" stroke-width="0.9"/>
+        <line x1="143" y1="52" x2="143" y2="62" stroke="#111" stroke-width="0.9"/>
+        <line x1="148" y1="52" x2="148" y2="62" stroke="#111" stroke-width="0.9"/>
+        <!-- strap lugs -->
+        <rect x="3"   y="70" width="9" height="18" rx="2" stroke="#111" stroke-width="1.2"/>
+        <rect x="158" y="70" width="9" height="18" rx="2" stroke="#111" stroke-width="1.2"/>
+      </svg>
+    </a>
+
+    <!-- 4. Typography — Serifed 가 -->
+    <a href="project-type.html" class="icon-item item-4" data-id="type" aria-label="글자 실험실">
+      <svg viewBox="0 0 160 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- ㄱ horizontal bar -->
+        <line x1="22" y1="38" x2="92" y2="38" stroke="#111" stroke-width="13" stroke-linecap="square"/>
+        <!-- ㄱ vertical bar -->
+        <line x1="22" y1="38" x2="22" y2="112" stroke="#111" stroke-width="13" stroke-linecap="square"/>
+        <!-- ㅏ vertical bar -->
+        <line x1="112" y1="24" x2="112" y2="112" stroke="#111" stroke-width="13" stroke-linecap="square"/>
+        <!-- ㅏ horizontal short bar -->
+        <line x1="112" y1="65" x2="145" y2="65" stroke="#111" stroke-width="13" stroke-linecap="square"/>
+        <!-- serifs on ㄱ -->
+        <line x1="10" y1="38" x2="36" y2="38" stroke="#111" stroke-width="5.5" stroke-linecap="round"/>
+        <line x1="79" y1="25" x2="79" y2="51" stroke="#111" stroke-width="5.5" stroke-linecap="round"/>
+        <line x1="10" y1="112" x2="36" y2="112" stroke="#111" stroke-width="5.5" stroke-linecap="round"/>
+        <!-- serifs on ㅏ -->
+        <line x1="100" y1="24" x2="125" y2="24"  stroke="#111" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="100" y1="112" x2="125" y2="112" stroke="#111" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="133" y1="53" x2="133" y2="77"   stroke="#111" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- baseline guideline -->
+        <line x1="8" y1="145" x2="152" y2="145" stroke="#bbb" stroke-width="0.8" stroke-dasharray="4 3"/>
+        <!-- specimen lines -->
+        <line x1="10" y1="162" x2="150" y2="162" stroke="#d0cdc8" stroke-width="0.7"/>
+        <line x1="10" y1="174" x2="115" y2="174" stroke="#d0cdc8" stroke-width="0.7"/>
+      </svg>
+    </a>
+
+    <!-- 5. Space — One-point Perspective Room -->
+    <a href="project-space.html" class="icon-item item-5" data-id="space" aria-label="비어있는 방">
+      <svg viewBox="0 0 160 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- fills first (back to front) -->
+        <!-- ceiling -->
+        <polygon points="8,15 60,65 100,65 152,15" fill="#f0ede7"/>
+        <!-- left wall -->
+        <polygon points="8,15 60,65 60,148 8,190" fill="#e8e5de"/>
+        <!-- right wall -->
+        <polygon points="152,15 100,65 100,148 152,190" fill="#eeebe4"/>
+        <!-- floor -->
+        <polygon points="8,190 60,148 100,148 152,190" fill="#e2dfd8"/>
+        <!-- back wall -->
+        <rect x="60" y="65" width="40" height="83" fill="#f5f2ec"/>
+        <!-- window -->
+        <rect x="68" y="76" width="24" height="36" fill="#d8e8f0" stroke="#111" stroke-width="1"/>
+        <line x1="80" y1="76" x2="80" y2="112" stroke="#111" stroke-width="0.9"/>
+        <line x1="68" y1="94" x2="92" y2="94" stroke="#111" stroke-width="0.9"/>
+        <!-- light shaft from window onto floor -->
+        <polygon points="68,112 15,190 68,190 92,112" fill="#111" fill-opacity="0.04"/>
+        <!-- strokes on top -->
+        <polygon points="8,15 60,65 100,65 152,15" stroke="#111" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
+        <polygon points="8,15 60,65 60,148 8,190"  stroke="#111" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
+        <polygon points="152,15 100,65 100,148 152,190" stroke="#111" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
+        <polygon points="8,190 60,148 100,148 152,190" stroke="#111" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
+        <rect x="60" y="65" width="40" height="83" stroke="#111" stroke-width="1.3" fill="none"/>
+        <!-- outer boundary -->
+        <rect x="8" y="15" width="144" height="175" stroke="#111" stroke-width="1.5" fill="none"/>
+      </svg>
+    </a>
+
+    <!-- 6. Print — Brayer / Roller -->
+    <a href="project-print.html" class="icon-item item-6" data-id="print" aria-label="인쇄된 시간">
+      <svg viewBox="0 0 160 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- handle grip bar -->
+        <rect x="44" y="18" width="72" height="15" rx="7.5" fill="#e4e1da" stroke="#111" stroke-width="1.4"/>
+        <!-- handle stem -->
+        <line x1="80" y1="33" x2="80" y2="60" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+        <!-- axle bar -->
+        <line x1="22" y1="60" x2="138" y2="60" stroke="#111" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- roller body -->
+        <!-- top ellipse of cylinder -->
+        <path d="M22,72 Q80,58 138,72" stroke="#111" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="22" y1="72"  x2="22"  y2="120" stroke="#111" stroke-width="1.4"/>
+        <line x1="138" y1="72" x2="138" y2="120" stroke="#111" stroke-width="1.4"/>
+        <!-- bottom ellipse -->
+        <ellipse cx="80" cy="120" rx="58" ry="14" fill="#dad7d0" stroke="#111" stroke-width="1.4"/>
+        <!-- roller fill -->
+        <path d="M22,72 Q80,58 138,72 L138,120 Q80,106 22,120 Z" fill="#e4e1da"/>
+        <path d="M22,72 Q80,58 138,72" stroke="#111" stroke-width="1.4" stroke-linecap="round"/>
+        <!-- ink streaks -->
+        <line x1="36"  y1="134" x2="33"  y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
+        <line x1="51"  y1="134" x2="50"  y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.6"/>
+        <line x1="66"  y1="134" x2="67"  y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.75"/>
+        <line x1="80"  y1="134" x2="80"  y2="178" stroke="#111" stroke-width="1.3" stroke-linecap="round"/>
+        <line x1="94"  y1="134" x2="95"  y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.75"/>
+        <line x1="109" y1="134" x2="110" y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.6"/>
+        <line x1="124" y1="134" x2="127" y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
+      </svg>
+    </a>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <button class="contact-btn" onclick="openContact()" aria-label="Contact">
+      <svg viewBox="0 0 22 16" fill="none" stroke="#111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="1" y="1" width="20" height="14" rx="1.5"/>
+        <path d="M1,1 L11,9.5 L21,1"/>
+      </svg>
+    </button>
+  </footer>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal-overlay" id="contactModal" onclick="closeContactOutside(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeContact()">×</button>
+      <p class="modal-label">Contact</p>
+      <div class="contact-row">
+        <span>sunniego23@gmail.com</span>
+        <a href="https://www.instagram.com/suntree.workshop" target="_blank" rel="noopener">@suntree.workshop</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ── Contact modal ── */
+    function openContact()  { document.getElementById('contactModal').classList.add('open'); }
+    function closeContact() { document.getElementById('contactModal').classList.remove('open'); }
+    function closeContactOutside(e) { if (e.target===document.getElementById('contactModal')) closeContact(); }
+    document.addEventListener('keydown', e => { if (e.key==='Escape') closeContact(); });
+
+    /* ── Storage keys ── */
+    const POS_KEY = 'suntree_pos_v2';
+    const IMG_KEY = 'suntree_img_v2';
+
+    /* ── Clamp helper ── */
+    function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+    /* ── Replace icon graphic ── */
+    function applyCustomImage(item, dataUrl) {
+      const existing = item.querySelector('svg, img.custom-icon');
+      const img = document.createElement('img');
+      img.src = dataUrl;
+      img.className = 'custom-icon';
+      if (existing) existing.replaceWith(img);
+      else item.prepend(img);
+    }
+
+    /* ── Persist icon position as % of canvas ── */
+    function savePos(item) {
+      const canvas = document.querySelector('.canvas');
+      const cr = canvas.getBoundingClientRect();
+      const ir = item.getBoundingClientRect();
+      const left = ((ir.left - cr.left) / canvas.offsetWidth  * 100).toFixed(3) + '%';
+      const top  = ((ir.top  - cr.top)  / canvas.offsetHeight * 100).toFixed(3) + '%';
+      try {
+        const d = JSON.parse(localStorage.getItem(POS_KEY) || '{}');
+        d[item.dataset.id] = { left, top };
+        localStorage.setItem(POS_KEY, JSON.stringify(d));
+      } catch(_) {}
+    }
+
+    /* ── Restore saved positions ── */
+    function loadPositions() {
+      let d;
+      try { d = JSON.parse(localStorage.getItem(POS_KEY) || '{}'); } catch(_) { return; }
+      document.querySelectorAll('.icon-item[data-id]').forEach(item => {
+        const p = d[item.dataset.id];
+        if (!p) return;
+        item.style.left      = p.left;
+        item.style.top       = p.top;
+        item.style.right     = 'auto';
+        item.style.bottom    = 'auto';
+        item.style.transform = 'none';
+      });
+    }
+
+    /* ── Restore saved images ── */
+    function loadImages() {
+      let d;
+      try { d = JSON.parse(localStorage.getItem(IMG_KEY) || '{}'); } catch(_) { return; }
+      document.querySelectorAll('.icon-item[data-id]').forEach(item => {
+        if (d[item.dataset.id]) applyCustomImage(item, d[item.dataset.id]);
+      });
+    }
+
+    /* ── Drag (mouse + touch) ── */
+    function initDrag() {
+      const canvas = document.querySelector('.canvas');
+
+      document.querySelectorAll('.icon-item[data-id]').forEach(item => {
+        let active = false, dist = 0, sX, sY, oL, oT;
+
+        function startDrag(cx, cy) {
+          dist = 0; active = false;
+          sX = cx; sY = cy;
+          const cr  = canvas.getBoundingClientRect();
+          const ir  = item.getBoundingClientRect();
+          oL = ir.left - cr.left;
+          oT = ir.top  - cr.top;
+          // anchor position in px so we can add deltas
+          item.style.left      = oL + 'px';
+          item.style.top       = oT + 'px';
+          item.style.right     = 'auto';
+          item.style.bottom    = 'auto';
+          item.style.transform = 'none';
+          item.style.zIndex    = '50';
+          item.classList.add('is-dragging');
+        }
+
+        function moveDrag(cx, cy) {
+          const dx = cx - sX, dy = cy - sY;
+          dist = Math.hypot(dx, dy);
+          if (dist < 4) return;
+          active = true;
+          const maxL = canvas.offsetWidth  - item.offsetWidth;
+          const maxT = canvas.offsetHeight - item.offsetHeight;
+          item.style.left = clamp(oL + dx, 0, maxL) + 'px';
+          item.style.top  = clamp(oT + dy, 0, maxT) + 'px';
+        }
+
+        function endDrag() {
+          item.style.zIndex = '';
+          item.classList.remove('is-dragging');
+          if (active) savePos(item);
+        }
+
+        /* Mouse */
+        item.addEventListener('mousedown', e => {
+          if (e.button !== 0 || e.target.closest('.icon-edit-btn')) return;
+          e.preventDefault();
+          startDrag(e.clientX, e.clientY);
+          const move = ev => moveDrag(ev.clientX, ev.clientY);
+          const up   = () => { endDrag(); document.removeEventListener('mousemove', move); document.removeEventListener('mouseup', up); };
+          document.addEventListener('mousemove', move);
+          document.addEventListener('mouseup', up);
+        });
+
+        /* Block navigation when drag happened */
+        item.addEventListener('click', e => { if (dist > 4) e.preventDefault(); });
+
+        /* Touch */
+        item.addEventListener('touchstart', e => {
+          if (e.target.closest('.icon-edit-btn')) return;
+          const t = e.touches[0];
+          startDrag(t.clientX, t.clientY);
+        }, { passive: true });
+
+        item.addEventListener('touchmove', e => {
+          const t = e.touches[0];
+          moveDrag(t.clientX, t.clientY);
+          if (active) e.preventDefault();
+        }, { passive: false });
+
+        item.addEventListener('touchend', endDrag);
+      });
+    }
+
+    /* ── Edit (replace icon) button ── */
+    function initEditButtons() {
+      const pencilSVG = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11,3 L13,5 L5,13 L2,14 L3,11 Z"/>
+        <line x1="9.5" y1="4.5" x2="11.5" y2="6.5"/>
+      </svg>`;
+
+      document.querySelectorAll('.icon-item[data-id]').forEach(item => {
+        const btn = document.createElement('button');
+        btn.className = 'icon-edit-btn';
+        btn.title = '이미지 교체';
+        btn.innerHTML = pencilSVG;
+
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          const input = document.createElement('input');
+          input.type = 'file';
+          input.accept = 'image/*';
+          input.onchange = ev => {
+            const file = ev.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = re => {
+              const url = re.target.result;
+              applyCustomImage(item, url);
+              try {
+                const d = JSON.parse(localStorage.getItem(IMG_KEY) || '{}');
+                d[item.dataset.id] = url;
+                localStorage.setItem(IMG_KEY, JSON.stringify(d));
+              } catch(_) {
+                alert('이미지가 너무 큽니다. 더 작은 파일을 사용해주세요.');
+              }
+            };
+            reader.readAsDataURL(file);
+          };
+          input.click();
+        });
+
+        item.appendChild(btn);
+      });
+    }
+
+    /* ── Init ── */
+    loadPositions();
+    loadImages();
+    initDrag();
+    initEditButtons();
+  </script>
+</body>
+</html>
