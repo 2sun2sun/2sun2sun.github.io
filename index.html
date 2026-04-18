@@ -12,18 +12,17 @@
 
   <!-- HEADER -->
   <header class="index-header">
-    <a href="index.html" class="index-header-title" aria-label="메인으로 이동">piece</a>
-    <a href="index.html" class="index-header-home" aria-label="홈">
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4.5 14.5L16 5l11.5 9.5" />
-        <path d="M7.5 13.5V27h17V13.5" />
-        <path d="M13 27v-8h6v8" />
-      </svg>
-    </a>
+    <a href="index.html" class="index-header-home-link index-header-menu-link" aria-label="메인으로 이동">home</a>
+    <nav class="index-header-menu" aria-label="주요 메뉴">
+      <a href="project-space.html" class="index-header-menu-link">about</a>
+      <a href="#works" class="index-header-menu-link">works</a>
+      <a href="index.html" class="index-header-menu-link">piece</a>
+      <button type="button" class="index-header-menu-link index-header-menu-button" onclick="openContact()">contact</button>
+    </nav>
   </header>
 
   <!-- CANVAS -->
-  <div class="canvas">
+  <div class="canvas" id="works">
 
     <!-- 1. Editorial — Open Book -->
     <a href="project-editorial.html" class="icon-item item-1" data-id="editorial" aria-label="종이의 결">
