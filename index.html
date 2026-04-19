@@ -5,244 +5,462 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>썬트리 워크샵</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&family=Noto+Serif+KR:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+KR:wght@300;400&family=Noto+Serif+KR:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="index-body">
 
   <!-- HEADER -->
   <header class="index-header">
-    <a href="index.html" class="index-header-home-link index-header-menu-link" aria-label="메인으로 이동">home</a>
+    <a href="index.html" class="index-header-home-link index-header-menu-link" aria-label="메인으로 이동">Home</a>
     <nav class="index-header-menu" aria-label="주요 메뉴">
-      <a href="project-space.html" class="index-header-menu-link">about</a>
-      <a href="#works" class="index-header-menu-link">works</a>
-      <a href="index.html" class="index-header-menu-link">piece</a>
-      <button type="button" class="index-header-menu-link index-header-menu-button" onclick="openContact()">contact</button>
+      <button type="button" class="index-header-menu-link index-header-menu-button" onclick="openAboutPanel()">About</button>
+      <button type="button" class="index-header-menu-link index-header-menu-button" onclick="openWorksPanel()">Work</button>
+      <button type="button" class="index-header-menu-link index-header-menu-button" onclick="openPiecePanel()">Piece</button>
     </nav>
   </header>
 
   <!-- CANVAS -->
   <div class="canvas" id="works">
 
-    <!-- 1. Editorial — Open Book -->
+    <!-- Interactive grass -->
+    <div class="canvas-plant">
+      <svg id="grass-svg" viewBox="0 0 1400 495" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet"></svg>
+    </div>
+
+    <!-- 1. Editorial -->
     <a href="project-editorial.html" class="icon-item item-1" data-id="editorial" aria-label="종이의 결">
-      <svg viewBox="0 0 160 175" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M80,162 C57,150 24,148 9,153 L9,36 C24,30 57,32 80,45 Z" fill="#edeae3" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/>
-        <path d="M80,162 C103,150 136,148 151,153 L151,36 C136,30 103,32 80,45 Z" fill="#e7e3dc" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/>
-        <line x1="80" y1="45" x2="80" y2="162" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
-        <!-- left page lines -->
-        <line x1="21" y1="66" x2="70" y2="64" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="21" y1="77" x2="70" y2="76" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="21" y1="88" x2="70" y2="87" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="21" y1="99" x2="54" y2="99" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="21" y1="115" x2="70" y2="114" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="21" y1="126" x2="70" y2="125" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="21" y1="137" x2="47" y2="137" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <!-- right page lines -->
-        <line x1="90" y1="64" x2="139" y2="66" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="90" y1="76" x2="139" y2="77" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="90" y1="87" x2="139" y2="88" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="90" y1="99" x2="122" y2="99" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="90" y1="114" x2="139" y2="115" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="90" y1="125" x2="139" y2="126" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-        <line x1="90" y1="137" x2="115" y2="137" stroke="#b0ada7" stroke-width="1" stroke-linecap="round"/>
-      </svg>
+      <img src="image/icon/main icon/B.png" alt="Editorial" class="icon-png" />
     </a>
 
-    <!-- 2. Branding — Hanging Shop Sign -->
+    <!-- 2. Branding -->
     <a href="project-branding.html" class="icon-item item-2" data-id="branding" aria-label="느린 상점">
-      <svg viewBox="0 0 160 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- wall bracket -->
-        <line x1="0" y1="28" x2="85" y2="28" stroke="#111" stroke-width="2" stroke-linecap="round"/>
-        <line x1="0" y1="18" x2="0" y2="48" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M0,48 Q32,48 32,28" stroke="#111" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        <!-- hanging strings -->
-        <line x1="48" y1="28" x2="40" y2="58" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
-        <line x1="112" y1="28" x2="120" y2="58" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
-        <!-- sign board -->
-        <rect x="28" y="58" width="104" height="82" rx="4" fill="#edeae3" stroke="#111" stroke-width="1.4"/>
-        <rect x="35" y="65" width="90" height="68" rx="2" stroke="#111" stroke-width="0.8"/>
-        <!-- sign lines -->
-        <line x1="50" y1="86" x2="110" y2="86" stroke="#aaa" stroke-width="1" stroke-linecap="round"/>
-        <line x1="54" y1="99" x2="106" y2="99" stroke="#aaa" stroke-width="1" stroke-linecap="round"/>
-        <line x1="58" y1="112" x2="102" y2="112" stroke="#aaa" stroke-width="1" stroke-linecap="round"/>
-        <!-- tassels -->
-        <line x1="53" y1="140" x2="51" y2="162" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
-        <line x1="80" y1="140" x2="80" y2="165" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
-        <line x1="107" y1="140" x2="109" y2="162" stroke="#111" stroke-width="1.2" stroke-linecap="round"/>
-        <circle cx="51" cy="165" r="3.5" fill="#111"/>
-        <circle cx="80" cy="168" r="3.5" fill="#111"/>
-        <circle cx="109" cy="165" r="3.5" fill="#111"/>
-      </svg>
+      <img src="image/icon/main icon/L.png" alt="Branding" class="icon-png" />
     </a>
 
-    <!-- 3. Photography — Vintage Camera -->
+    <!-- 3. Photography -->
     <a href="project-photo.html" class="icon-item item-3" data-id="photo" aria-label="빛이 닿는 곳">
-      <svg viewBox="0 0 170 165" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- body -->
-        <rect x="10" y="55" width="150" height="100" rx="8" fill="#edeae3" stroke="#111" stroke-width="1.4"/>
-        <!-- top plate + pentaprism -->
-        <path d="M44,55 L44,40 L56,26 L114,26 L126,40 L126,55 Z" fill="#e4e1da" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/>
-        <!-- hot shoe -->
-        <line x1="68" y1="26" x2="102" y2="26" stroke="#111" stroke-width="2" stroke-linecap="round"/>
-        <!-- lens outer -->
-        <circle cx="85" cy="107" r="38" stroke="#111" stroke-width="1.4"/>
-        <!-- lens mid -->
-        <circle cx="85" cy="107" r="29" stroke="#111" stroke-width="1.2"/>
-        <!-- lens glass -->
-        <circle cx="85" cy="107" r="20" fill="#ccc9c3" stroke="#111" stroke-width="1.2"/>
-        <!-- lens reflection -->
-        <path d="M74,97 Q77,93 83,95" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
-        <!-- viewfinder -->
-        <rect x="18" y="36" width="22" height="14" rx="2" fill="#aaa9a4" stroke="#111" stroke-width="1.2"/>
-        <!-- shutter -->
-        <circle cx="120" cy="39" r="7.5" fill="#c8c4be" stroke="#111" stroke-width="1.3"/>
-        <!-- film advance -->
-        <rect x="133" y="52" width="20" height="10" rx="2" fill="#ddd9d2" stroke="#111" stroke-width="1"/>
-        <line x1="138" y1="52" x2="138" y2="62" stroke="#111" stroke-width="0.9"/>
-        <line x1="143" y1="52" x2="143" y2="62" stroke="#111" stroke-width="0.9"/>
-        <line x1="148" y1="52" x2="148" y2="62" stroke="#111" stroke-width="0.9"/>
-        <!-- strap lugs -->
-        <rect x="3"   y="70" width="9" height="18" rx="2" stroke="#111" stroke-width="1.2"/>
-        <rect x="158" y="70" width="9" height="18" rx="2" stroke="#111" stroke-width="1.2"/>
-      </svg>
+      <img src="image/icon/main icon/D.png" alt="Photography" class="icon-png" />
     </a>
 
-    <!-- 4. Typography — Serifed 가 -->
+    <!-- 4. Typography -->
     <a href="project-type.html" class="icon-item item-4" data-id="type" aria-label="글자 실험실">
-      <svg viewBox="0 0 160 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- ㄱ horizontal bar -->
-        <line x1="22" y1="38" x2="92" y2="38" stroke="#111" stroke-width="13" stroke-linecap="square"/>
-        <!-- ㄱ vertical bar -->
-        <line x1="22" y1="38" x2="22" y2="112" stroke="#111" stroke-width="13" stroke-linecap="square"/>
-        <!-- ㅏ vertical bar -->
-        <line x1="112" y1="24" x2="112" y2="112" stroke="#111" stroke-width="13" stroke-linecap="square"/>
-        <!-- ㅏ horizontal short bar -->
-        <line x1="112" y1="65" x2="145" y2="65" stroke="#111" stroke-width="13" stroke-linecap="square"/>
-        <!-- serifs on ㄱ -->
-        <line x1="10" y1="38" x2="36" y2="38" stroke="#111" stroke-width="5.5" stroke-linecap="round"/>
-        <line x1="79" y1="25" x2="79" y2="51" stroke="#111" stroke-width="5.5" stroke-linecap="round"/>
-        <line x1="10" y1="112" x2="36" y2="112" stroke="#111" stroke-width="5.5" stroke-linecap="round"/>
-        <!-- serifs on ㅏ -->
-        <line x1="100" y1="24" x2="125" y2="24"  stroke="#111" stroke-width="4.5" stroke-linecap="round"/>
-        <line x1="100" y1="112" x2="125" y2="112" stroke="#111" stroke-width="4.5" stroke-linecap="round"/>
-        <line x1="133" y1="53" x2="133" y2="77"   stroke="#111" stroke-width="4.5" stroke-linecap="round"/>
-        <!-- baseline guideline -->
-        <line x1="8" y1="145" x2="152" y2="145" stroke="#bbb" stroke-width="0.8" stroke-dasharray="4 3"/>
-        <!-- specimen lines -->
-        <line x1="10" y1="162" x2="150" y2="162" stroke="#d0cdc8" stroke-width="0.7"/>
-        <line x1="10" y1="174" x2="115" y2="174" stroke="#d0cdc8" stroke-width="0.7"/>
-      </svg>
+      <img src="image/icon/main icon/P.png" alt="Typography" class="icon-png" />
     </a>
 
-    <!-- 5. Space — One-point Perspective Room -->
+    <!-- 5. Space -->
     <a href="project-space.html" class="icon-item item-5" data-id="space" aria-label="비어있는 방">
-      <svg viewBox="0 0 160 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- fills first (back to front) -->
-        <!-- ceiling -->
-        <polygon points="8,15 60,65 100,65 152,15" fill="#f0ede7"/>
-        <!-- left wall -->
-        <polygon points="8,15 60,65 60,148 8,190" fill="#e8e5de"/>
-        <!-- right wall -->
-        <polygon points="152,15 100,65 100,148 152,190" fill="#eeebe4"/>
-        <!-- floor -->
-        <polygon points="8,190 60,148 100,148 152,190" fill="#e2dfd8"/>
-        <!-- back wall -->
-        <rect x="60" y="65" width="40" height="83" fill="#f5f2ec"/>
-        <!-- window -->
-        <rect x="68" y="76" width="24" height="36" fill="#d8e8f0" stroke="#111" stroke-width="1"/>
-        <line x1="80" y1="76" x2="80" y2="112" stroke="#111" stroke-width="0.9"/>
-        <line x1="68" y1="94" x2="92" y2="94" stroke="#111" stroke-width="0.9"/>
-        <!-- light shaft from window onto floor -->
-        <polygon points="68,112 15,190 68,190 92,112" fill="#111" fill-opacity="0.04"/>
-        <!-- strokes on top -->
-        <polygon points="8,15 60,65 100,65 152,15" stroke="#111" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
-        <polygon points="8,15 60,65 60,148 8,190"  stroke="#111" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
-        <polygon points="152,15 100,65 100,148 152,190" stroke="#111" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
-        <polygon points="8,190 60,148 100,148 152,190" stroke="#111" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
-        <rect x="60" y="65" width="40" height="83" stroke="#111" stroke-width="1.3" fill="none"/>
-        <!-- outer boundary -->
-        <rect x="8" y="15" width="144" height="175" stroke="#111" stroke-width="1.5" fill="none"/>
-      </svg>
+      <img src="image/icon/main icon/E.png" alt="Space" class="icon-png" />
     </a>
 
-    <!-- 6. Print — Brayer / Roller -->
-    <a href="project-print.html" class="icon-item item-6" data-id="print" aria-label="인쇄된 시간">
-      <svg viewBox="0 0 160 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- handle grip bar -->
-        <rect x="44" y="18" width="72" height="15" rx="7.5" fill="#e4e1da" stroke="#111" stroke-width="1.4"/>
-        <!-- handle stem -->
-        <line x1="80" y1="33" x2="80" y2="60" stroke="#111" stroke-width="3" stroke-linecap="round"/>
-        <!-- axle bar -->
-        <line x1="22" y1="60" x2="138" y2="60" stroke="#111" stroke-width="1.5" stroke-linecap="round"/>
-        <!-- roller body -->
-        <!-- top ellipse of cylinder -->
-        <path d="M22,72 Q80,58 138,72" stroke="#111" stroke-width="1.4" stroke-linecap="round"/>
-        <line x1="22" y1="72"  x2="22"  y2="120" stroke="#111" stroke-width="1.4"/>
-        <line x1="138" y1="72" x2="138" y2="120" stroke="#111" stroke-width="1.4"/>
-        <!-- bottom ellipse -->
-        <ellipse cx="80" cy="120" rx="58" ry="14" fill="#dad7d0" stroke="#111" stroke-width="1.4"/>
-        <!-- roller fill -->
-        <path d="M22,72 Q80,58 138,72 L138,120 Q80,106 22,120 Z" fill="#e4e1da"/>
-        <path d="M22,72 Q80,58 138,72" stroke="#111" stroke-width="1.4" stroke-linecap="round"/>
-        <!-- ink streaks -->
-        <line x1="36"  y1="134" x2="33"  y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
-        <line x1="51"  y1="134" x2="50"  y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.6"/>
-        <line x1="66"  y1="134" x2="67"  y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.75"/>
-        <line x1="80"  y1="134" x2="80"  y2="178" stroke="#111" stroke-width="1.3" stroke-linecap="round"/>
-        <line x1="94"  y1="134" x2="95"  y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.75"/>
-        <line x1="109" y1="134" x2="110" y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.6"/>
-        <line x1="124" y1="134" x2="127" y2="178" stroke="#111" stroke-width="1"   stroke-linecap="round" opacity="0.5"/>
-      </svg>
-    </a>
 
   </div>
 
   <!-- FOOTER -->
   <footer>
     <button class="contact-btn" onclick="openContact()" aria-label="Contact">
-      <svg viewBox="0 0 22 16" fill="none" stroke="#111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="1" y="1" width="20" height="14" rx="1.5"/>
-        <path d="M1,1 L11,9.5 L21,1"/>
-      </svg>
+      <img src="image/icon/flower.png" alt="" class="contact-bird-icon" />
     </button>
   </footer>
 
-  <!-- CONTACT MODAL -->
-  <div class="modal-overlay" id="contactModal" onclick="closeContactOutside(event)">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeContact()">×</button>
-      <p class="modal-label">Contact</p>
-      <div class="contact-row">
-        <span>sunniego23@gmail.com</span>
-        <a href="https://www.instagram.com/suntree.workshop" target="_blank" rel="noopener">@suntree.workshop</a>
+  <!-- BEE CURSOR -->
+  <img src="image/icon/bee.png" alt="" class="bee-cursor" id="beeCursor" />
+
+  <!-- CAKE CURSOR -->
+  <img src="image/icon/cake.png" alt="" class="piece-cursor" id="pieceCursor" />
+
+  <!-- PAPER NOTE -->
+  <div class="paper-note" id="paperNote" onclick="closeContactOutside(event)">
+    <div class="paper-wrap">
+      <div class="paper-body">
+        <button class="paper-close" onclick="closeContact()">×</button>
+        <div class="paper-card">
+          <p class="paper-kicker">Contact</p>
+          <div class="contact-row contact-row-card">
+            <a href="mailto:seonyeong12343@gmail.com" class="paper-contact-link">seonyeong12343@gmail.com</a>
+            <a href="https://www.instagram.com/2sun2.sun/" target="_blank" rel="noopener" class="paper-contact-link">@2sun2.sun</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKS PANEL -->
+  <div class="works-panel" id="worksPanel">
+    <div class="works-panel-bar">
+      <span class="works-panel-label">work</span>
+      <div class="works-panel-center">PROJECT<br>by 2sun2sun</div>
+      <button class="works-panel-close" type="button" onclick="closeWorksPanel()">home</button>
+    </div>
+    <div class="works-panel-body" id="worksPanelBody">
+      <div class="works-list">
+
+        <article class="works-item">
+          <p class="works-item-title">종이의 결, 에디토리얼</p>
+          <a class="works-item-img-wrap" href="project-editorial.html">
+            <div class="works-item-img" style="background:#e8e5df;"></div>
+          </a>
+          <div class="works-item-foot">
+            <span class="works-item-meta">00—1&nbsp;&nbsp;종이의 결&nbsp;&nbsp;자체 기획</span>
+          </div>
+        </article>
+
+        <article class="works-item">
+          <p class="works-item-title">느린 상점, 브랜딩</p>
+          <a class="works-item-img-wrap" href="project-branding.html">
+            <div class="works-item-img" style="background:#dde0e4;"></div>
+          </a>
+          <div class="works-item-foot">
+            <span class="works-item-meta">00—2&nbsp;&nbsp;느린 상점&nbsp;&nbsp;클라이언트</span>
+          </div>
+        </article>
+
+        <article class="works-item">
+          <p class="works-item-title">빛이 닿는 곳, 사진</p>
+          <a class="works-item-img-wrap" href="project-photo.html">
+            <div class="works-item-img" style="background:#e2dfe0;"></div>
+          </a>
+          <div class="works-item-foot">
+            <span class="works-item-meta">00—3&nbsp;&nbsp;빛이 닿는 곳&nbsp;&nbsp;자체 기획</span>
+          </div>
+        </article>
+
+        <article class="works-item">
+          <p class="works-item-title">글자 실험실, 타이포그래피</p>
+          <a class="works-item-img-wrap" href="project-type.html">
+            <div class="works-item-img" style="background:#e5e3db;"></div>
+          </a>
+          <div class="works-item-foot">
+            <span class="works-item-meta">00—4&nbsp;&nbsp;글자 실험실&nbsp;&nbsp;자체 기획</span>
+          </div>
+        </article>
+
+        <article class="works-item">
+          <p class="works-item-title">비어있는 방, 공간</p>
+          <a class="works-item-img-wrap" href="project-space.html">
+            <div class="works-item-img" style="background:#dfe2df;"></div>
+          </a>
+          <div class="works-item-foot">
+            <span class="works-item-meta">00—5&nbsp;&nbsp;비어있는 방&nbsp;&nbsp;클라이언트</span>
+          </div>
+        </article>
+
+        <article class="works-item">
+          <p class="works-item-title">인쇄된 시간, 인쇄</p>
+          <a class="works-item-img-wrap" href="project-print.html">
+            <div class="works-item-img" style="background:#e0ddd8;"></div>
+          </a>
+          <div class="works-item-foot">
+            <span class="works-item-meta">00—6&nbsp;&nbsp;인쇄된 시간&nbsp;&nbsp;자체 기획</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT PANEL -->
+  <div class="about-panel" id="aboutPanel">
+    <div class="about-panel-bar">
+      <span class="about-panel-label">about</span>
+      <button class="about-panel-close" type="button" onclick="closeAboutPanel()">home</button>
+    </div>
+    <div class="about-panel-body">
+      <div class="about-grid">
+
+        <!-- Left column -->
+        <div class="about-col-left">
+          <p class="about-site-name">썬트리 워크샵</p>
+
+          <div class="about-section">
+            <p class="about-section-label">Upcoming:</p>
+            <p class="about-upcoming-title"><mark>프로젝트명, 장소</mark></p>
+            <p class="about-upcoming-date">날짜 — 날짜</p>
+          </div>
+
+          <div class="about-section">
+            <p class="about-section-label">Previously;</p>
+
+            <div class="about-year-block">
+              <p class="about-year">2025</p>
+              <p>프로젝트 A, 장소 A, 클라이언트 A</p>
+              <p>프로젝트 B, 장소 B, 클라이언트 B</p>
+              <p>프로젝트 C, 장소 C, 클라이언트 C</p>
+            </div>
+
+            <div class="about-year-block">
+              <p class="about-year">2024</p>
+              <p>프로젝트 D, 장소 D, 클라이언트 D</p>
+              <p>프로젝트 E, 장소 E, 클라이언트 E</p>
+              <p>프로젝트 F, 장소 F, 클라이언트 F</p>
+              <p>프로젝트 G, 장소 G, 클라이언트 G</p>
+            </div>
+
+            <div class="about-year-block">
+              <p class="about-year">2023</p>
+              <p>프로젝트 H, 장소 H, 클라이언트 H</p>
+              <p>프로젝트 I, 장소 I, 클라이언트 I</p>
+            </div>
+          </div>
+
+          <p class="about-date" id="aboutDate"></p>
+        </div>
+
+        <!-- Right column -->
+        <div class="about-col-right">
+          <p class="about-bio-title">썬트리 워크샵,<br>서울 기반</p>
+
+          <p class="about-bio-text">그래픽 디자인, 브랜딩, 편집 디자인을 중심으로 활동하는 스튜디오입니다. 시각 언어를 통해 브랜드와 사람 사이의 관계를 조용히 만들어 나갑니다.</p>
+
+          <div class="about-links">
+            <a href="#" class="about-link">CV</a>
+            <a href="mailto:seonyeong12343@gmail.com" class="about-link">Email</a>
+            <a href="https://www.instagram.com/2sun2.sun/" target="_blank" rel="noopener" class="about-link">Instagram</a>
+          </div>
+
+          <p class="about-copyright">© <span id="aboutYear"></span> 썬트리 워크샵</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="piece-panel" id="piecePanel">
+    <div class="piece-panel-bar">
+      <span class="piece-panel-label">piece</span>
+      <button class="piece-panel-close" type="button" onclick="closePiecePanel()">home</button>
+    </div>
+
+    <div class="piece-panel-body">
+      <section class="piece-archive" aria-label="이미지 아카이브">
+
+        <button class="archive-item tall" type="button" data-image="image/snowooly/메인 이미지.jpg" data-code="P-01" data-title="Snowooly Main" data-credit="SRC">
+          <span class="archive-thumb"><img src="image/snowooly/메인 이미지.jpg" alt="" /></span>
+          <span class="archive-meta"><span>P-01</span><span>Snowooly Main</span><span>SRC</span></span>
+        </button>
+
+        <button class="archive-item portrait" type="button" data-image="image/bite me/Untitled-4.jpg" data-code="P-02" data-title="Bite Me 01" data-credit="SRC">
+          <span class="archive-thumb"><img src="image/bite me/Untitled-4.jpg" alt="" /></span>
+          <span class="archive-meta"><span>P-02</span><span>Bite Me 01</span><span>SRC</span></span>
+        </button>
+
+        <button class="archive-item portrait" type="button" data-image="image/bite me/Untitled-6.jpg" data-code="P-03" data-title="Bite Me 02" data-credit="SRC">
+          <span class="archive-thumb"><img src="image/bite me/Untitled-6.jpg" alt="" /></span>
+          <span class="archive-meta"><span>P-03</span><span>Bite Me 02</span><span>SRC</span></span>
+        </button>
+
+        <button class="archive-item tall" type="button" data-image="image/snowooly/디저트1.jpg" data-code="P-04" data-title="Dessert 01" data-credit="SRC">
+          <span class="archive-thumb"><img src="image/snowooly/디저트1.jpg" alt="" /></span>
+          <span class="archive-meta"><span>P-04</span><span>Dessert 01</span><span>SRC</span></span>
+        </button>
+
+        <button class="archive-item wide" type="button" data-image="image/snowooly/디저트2.png" data-code="P-05" data-title="Dessert 02" data-credit="SRC">
+          <span class="archive-thumb"><img src="image/snowooly/디저트2.png" alt="" /></span>
+          <span class="archive-meta"><span>P-05</span><span>Dessert 02</span><span>SRC</span></span>
+        </button>
+
+        <button class="archive-item portrait" type="button" data-image="image/snowooly/디저트3.jpg" data-code="P-06" data-title="Dessert 03" data-credit="SRC">
+          <span class="archive-thumb"><img src="image/snowooly/디저트3.jpg" alt="" /></span>
+          <span class="archive-meta"><span>P-06</span><span>Dessert 03</span><span>SRC</span></span>
+        </button>
+
+        <button class="archive-item square" type="button" data-image="image/snowooly/디저트4.jpg" data-code="P-07" data-title="Dessert 04" data-credit="SRC">
+          <span class="archive-thumb"><img src="image/snowooly/디저트4.jpg" alt="" /></span>
+          <span class="archive-meta"><span>P-07</span><span>Dessert 04</span><span>SRC</span></span>
+        </button>
+
+        <button class="archive-item portrait" type="button" data-image="image/snowooly/디저트5.jpg" data-code="P-08" data-title="Dessert 05" data-credit="SRC">
+          <span class="archive-thumb"><img src="image/snowooly/디저트5.jpg" alt="" /></span>
+          <span class="archive-meta"><span>P-08</span><span>Dessert 05</span><span>SRC</span></span>
+        </button>
+
+        <button class="archive-item portrait" type="button" data-image="image/snowooly/디저트6.jpg" data-code="P-09" data-title="Dessert 06" data-credit="SRC">
+          <span class="archive-thumb"><img src="image/snowooly/디저트6.jpg" alt="" /></span>
+          <span class="archive-meta"><span>P-09</span><span>Dessert 06</span><span>SRC</span></span>
+        </button>
+
+        <div class="archive-item ph"><span class="archive-thumb"></span><span class="archive-meta"><span>P-10</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item square"><span class="archive-thumb"></span><span class="archive-meta"><span>P-11</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item tall"><span class="archive-thumb"></span><span class="archive-meta"><span>P-12</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item wide"><span class="archive-thumb"></span><span class="archive-meta"><span>P-13</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item portrait"><span class="archive-thumb"></span><span class="archive-meta"><span>P-14</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item square"><span class="archive-thumb"></span><span class="archive-meta"><span>P-15</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item tall"><span class="archive-thumb"></span><span class="archive-meta"><span>P-16</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item ph"><span class="archive-thumb"></span><span class="archive-meta"><span>P-17</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item portrait"><span class="archive-thumb"></span><span class="archive-meta"><span>P-18</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item wide"><span class="archive-thumb"></span><span class="archive-meta"><span>P-19</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item tall"><span class="archive-thumb"></span><span class="archive-meta"><span>P-20</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item portrait"><span class="archive-thumb"></span><span class="archive-meta"><span>P-21</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item square"><span class="archive-thumb"></span><span class="archive-meta"><span>P-22</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item ph"><span class="archive-thumb"></span><span class="archive-meta"><span>P-23</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item tall"><span class="archive-thumb"></span><span class="archive-meta"><span>P-24</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item wide"><span class="archive-thumb"></span><span class="archive-meta"><span>P-25</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item portrait"><span class="archive-thumb"></span><span class="archive-meta"><span>P-26</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item square"><span class="archive-thumb"></span><span class="archive-meta"><span>P-27</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item ph"><span class="archive-thumb"></span><span class="archive-meta"><span>P-28</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item tall"><span class="archive-thumb"></span><span class="archive-meta"><span>P-29</span><span>—</span><span>SRC</span></span></div>
+        <div class="archive-item portrait"><span class="archive-thumb"></span><span class="archive-meta"><span>P-30</span><span>—</span><span>SRC</span></span></div>
+
+      </section>
+    </div>
+  </div>
+  <div class="piece-lightbox" id="pieceLightbox" aria-hidden="true" onclick="closePieceLightboxOutside(event)">
+    <div class="piece-lightbox-dialog">
+      <div class="piece-lightbox-frame">
+        <img id="pieceLightboxImage" src="" alt="" />
+      </div>
+      <div class="piece-lightbox-meta">
+        <span id="pieceLightboxCode"></span>
+        <span id="pieceLightboxTitle"></span>
+        <span id="pieceLightboxCredit"></span>
       </div>
     </div>
   </div>
 
   <script>
-    /* ── Contact modal ── */
-    function openContact()  { document.getElementById('contactModal').classList.add('open'); }
-    function closeContact() { document.getElementById('contactModal').classList.remove('open'); }
-    function closeContactOutside(e) { if (e.target===document.getElementById('contactModal')) closeContact(); }
-    document.addEventListener('keydown', e => { if (e.key==='Escape') closeContact(); });
+    /* ── Paper note (contact) ── */
+    function openContact() {
+      const el = document.getElementById('paperNote');
+      el.style.display = 'flex';
+      requestAnimationFrame(() => el.classList.add('open'));
+    }
+    function closeContact() {
+      const el = document.getElementById('paperNote');
+      el.classList.remove('open');
+      setTimeout(() => {
+        el.style.display = '';
+      }, 220);
+    }
+    function closeContactOutside(e) {
+      if (e.target === document.getElementById('paperNote')) closeContact();
+    }
+
+    /* ── Works panel ── */
+    const worksPanel = document.getElementById('worksPanel');
+    const worksPanelBody = document.getElementById('worksPanelBody');
+
+    const ratios = ['ratio-wide', 'ratio-std', 'ratio-tall'];
+    let worksTiltObserver = null;
+
+    function openWorksPanel() {
+      worksPanel.classList.add('open');
+      document.body.classList.add('works-panel-open');
+      worksPanel.querySelectorAll('.works-item-img').forEach((img, i) => {
+        img.className = 'works-item-img ' + ratios[i % ratios.length];
+      });
+      worksPanel.querySelectorAll('.works-item-img-wrap').forEach(w => w.classList.remove('is-straight'));
+      if (!worksTiltObserver) {
+        worksTiltObserver = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-straight'); });
+        }, { root: worksPanelBody, threshold: 0.45 });
+        worksPanelBody.querySelectorAll('.works-item-img-wrap').forEach(w => worksTiltObserver.observe(w));
+      }
+    }
+    function closeWorksPanel() {
+      worksPanel.classList.remove('open');
+      document.body.classList.remove('works-panel-open');
+    }
+
+    /* ── Bee cursor (main / about / works) ── */
+    const beeCursor = document.getElementById('beeCursor');
+    (function initBeeCursor() {
+      document.addEventListener('mousemove', e => {
+        beeCursor.style.left = e.clientX + 'px';
+        beeCursor.style.top  = e.clientY + 'px';
+      });
+    })();
+
+        /* ── About panel ── */
+    const aboutPanel = document.getElementById('aboutPanel');
+    function openAboutPanel() {
+      aboutPanel.classList.add('open');
+      document.body.classList.add('about-panel-open');
+      const now = new Date();
+      document.getElementById('aboutDate').textContent =
+        now.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      document.getElementById('aboutYear').textContent = now.getFullYear();
+    }
+    function closeAboutPanel() {
+      aboutPanel.classList.remove('open');
+      document.body.classList.remove('about-panel-open');
+    }
+
+    /* ── Piece panel ── */
+    const piecePanel = document.getElementById('piecePanel');
+    const pieceLightbox = document.getElementById('pieceLightbox');
+    const pieceLightboxImage = document.getElementById('pieceLightboxImage');
+    const pieceLightboxCode = document.getElementById('pieceLightboxCode');
+    const pieceLightboxTitle = document.getElementById('pieceLightboxTitle');
+    const pieceLightboxCredit = document.getElementById('pieceLightboxCredit');
+
+    /* ── Cake cursor ── */
+    const pieceCursor = document.getElementById('pieceCursor');
+    function initPieceCursor() {
+      piecePanel.addEventListener('mousemove', e => {
+        pieceCursor.style.left = e.clientX + 'px';
+        pieceCursor.style.top  = e.clientY + 'px';
+      });
+      piecePanel.addEventListener('mouseleave', () => {
+        pieceCursor.style.display = 'none';
+      });
+      piecePanel.addEventListener('mouseenter', () => {
+        pieceCursor.style.display = 'block';
+      });
+    }
+    initPieceCursor();
+
+    function openPiecePanel() {
+      piecePanel.classList.add('open');
+      document.body.classList.add('piece-panel-open');
+      pieceCursor.style.display = 'block';
+      beeCursor.style.display = 'none';
+    }
+
+    function closePiecePanel() {
+      piecePanel.classList.remove('open');
+      document.body.classList.remove('piece-panel-open');
+      pieceCursor.style.display = 'none';
+      beeCursor.style.display = '';
+      closePieceLightbox();
+    }
+
+    document.querySelectorAll('.archive-item[data-image]').forEach((item) => {
+      item.addEventListener('click', () => {
+        pieceLightboxImage.src = item.dataset.image;
+        pieceLightboxImage.alt = item.dataset.title;
+        pieceLightboxCode.textContent = item.dataset.code;
+        pieceLightboxTitle.textContent = item.dataset.title;
+        pieceLightboxCredit.textContent = item.dataset.credit;
+        pieceLightbox.classList.add('open');
+        pieceLightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closePieceLightbox() {
+      pieceLightbox.classList.remove('open');
+      pieceLightbox.setAttribute('aria-hidden', 'true');
+    }
+
+    function closePieceLightboxOutside(event) {
+      if (event.target === pieceLightbox) closePieceLightbox();
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        closePieceLightbox();
+        closePiecePanel();
+        closeAboutPanel();
+        closeWorksPanel();
+        closeContact();
+      }
+    });
+
 
     /* ── Storage keys ── */
     const POS_KEY = 'suntree_pos_v2';
-    const IMG_KEY = 'suntree_img_v2';
 
     /* ── Clamp helper ── */
     function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
-
-    /* ── Replace icon graphic ── */
-    function applyCustomImage(item, dataUrl) {
-      const existing = item.querySelector('svg, img.custom-icon');
-      const img = document.createElement('img');
-      img.src = dataUrl;
-      img.className = 'custom-icon';
-      if (existing) existing.replaceWith(img);
-      else item.prepend(img);
-    }
 
     /* ── Persist icon position as % of canvas ── */
     function savePos(item) {
@@ -273,15 +491,6 @@
       });
     }
 
-    /* ── Restore saved images ── */
-    function loadImages() {
-      let d;
-      try { d = JSON.parse(localStorage.getItem(IMG_KEY) || '{}'); } catch(_) { return; }
-      document.querySelectorAll('.icon-item[data-id]').forEach(item => {
-        if (d[item.dataset.id]) applyCustomImage(item, d[item.dataset.id]);
-      });
-    }
-
     /* ── Drag (mouse + touch) ── */
     function initDrag() {
       const canvas = document.querySelector('.canvas');
@@ -292,11 +501,10 @@
         function startDrag(cx, cy) {
           dist = 0; active = false;
           sX = cx; sY = cy;
-          const cr  = canvas.getBoundingClientRect();
-          const ir  = item.getBoundingClientRect();
+          const cr = canvas.getBoundingClientRect();
+          const ir = item.getBoundingClientRect();
           oL = ir.left - cr.left;
           oT = ir.top  - cr.top;
-          // anchor position in px so we can add deltas
           item.style.left      = oL + 'px';
           item.style.top       = oT + 'px';
           item.style.right     = 'auto';
@@ -323,9 +531,8 @@
           if (active) savePos(item);
         }
 
-        /* Mouse */
         item.addEventListener('mousedown', e => {
-          if (e.button !== 0 || e.target.closest('.icon-edit-btn')) return;
+          if (e.button !== 0) return;
           e.preventDefault();
           startDrag(e.clientX, e.clientY);
           const move = ev => moveDrag(ev.clientX, ev.clientY);
@@ -334,12 +541,9 @@
           document.addEventListener('mouseup', up);
         });
 
-        /* Block navigation when drag happened */
         item.addEventListener('click', e => { if (dist > 4) e.preventDefault(); });
 
-        /* Touch */
         item.addEventListener('touchstart', e => {
-          if (e.target.closest('.icon-edit-btn')) return;
           const t = e.touches[0];
           startDrag(t.clientX, t.clientY);
         }, { passive: true });
@@ -354,54 +558,166 @@
       });
     }
 
-    /* ── Edit (replace icon) button ── */
-    function initEditButtons() {
-      const pencilSVG = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M11,3 L13,5 L5,13 L2,14 L3,11 Z"/>
-        <line x1="9.5" y1="4.5" x2="11.5" y2="6.5"/>
-      </svg>`;
-
-      document.querySelectorAll('.icon-item[data-id]').forEach(item => {
-        const btn = document.createElement('button');
-        btn.className = 'icon-edit-btn';
-        btn.title = '이미지 교체';
-        btn.innerHTML = pencilSVG;
-
-        btn.addEventListener('click', e => {
-          e.preventDefault();
-          e.stopPropagation();
-          const input = document.createElement('input');
-          input.type = 'file';
-          input.accept = 'image/*';
-          input.onchange = ev => {
-            const file = ev.target.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = re => {
-              const url = re.target.result;
-              applyCustomImage(item, url);
-              try {
-                const d = JSON.parse(localStorage.getItem(IMG_KEY) || '{}');
-                d[item.dataset.id] = url;
-                localStorage.setItem(IMG_KEY, JSON.stringify(d));
-              } catch(_) {
-                alert('이미지가 너무 큽니다. 더 작은 파일을 사용해주세요.');
-              }
-            };
-            reader.readAsDataURL(file);
-          };
-          input.click();
-        });
-
-        item.appendChild(btn);
-      });
-    }
-
     /* ── Init ── */
     loadPositions();
-    loadImages();
     initDrag();
-    initEditButtons();
+
+    /* ── Icon reveal on grass sweep ── */
+    function revealIcon(item) {
+      if (item.classList.contains('is-visible')) return;
+      item.classList.add('is-visible', 'is-popping');
+      item.addEventListener('animationend', () => item.classList.remove('is-popping'), { once: true });
+    }
+
+    (function initReveal() {
+      let sweepDist = 0, lastSX = null, lastSY = null;
+      let queue = [], timer = null;
+      const STEP = 190;
+
+      function flush() {
+        if (!queue.length) { timer = null; return; }
+        /* reveal 1–2 icons at once */
+        const count = Math.random() < 0.5 ? 1 : 2;
+        for (let i = 0; i < count && queue.length; i++) revealIcon(queue.shift());
+        timer = queue.length ? setTimeout(flush, 120) : null;
+      }
+
+      document.addEventListener('mousemove', e => {
+        const cr = document.querySelector('.canvas').getBoundingClientRect();
+        if (e.clientX < cr.left || e.clientX > cr.right ||
+            e.clientY < cr.top  || e.clientY > cr.bottom) {
+          lastSX = null; lastSY = null; return;
+        }
+
+        if (lastSX !== null) {
+          sweepDist += Math.hypot(e.clientX - lastSX, e.clientY - lastSY);
+          while (sweepDist >= STEP) {
+            sweepDist -= STEP;
+            const hidden = Array.from(document.querySelectorAll('.icon-item:not(.is-visible)'));
+            if (!hidden.length) break;
+            const pick = hidden.reduce((best, item) => {
+              const r = item.getBoundingClientRect();
+              const d = Math.hypot(e.clientX - (r.left + r.right) / 2,
+                                   e.clientY - (r.top  + r.bottom) / 2);
+              return d < best.d ? { item, d } : best;
+            }, { item: null, d: Infinity }).item;
+            if (pick && !queue.includes(pick)) {
+              queue.push(pick);
+              if (!timer) flush();
+            }
+          }
+        }
+        lastSX = e.clientX;
+        lastSY = e.clientY;
+      });
+    })();
+
+    /* ── Interactive Grass ── */
+    (function initGrass() {
+      const svg = document.getElementById('grass-svg');
+      if (!svg) return;
+      const NS    = 'http://www.w3.org/2000/svg';
+      const COLOR = '#82aa28';
+      const SVG_W = 1400;
+      const BY    = 490;
+      const N     = 3000;
+
+      const blades = [];
+
+      for (let i = 0; i < N; i++) {
+        const t  = i / (N - 1);
+        const x  = 6 + t * (SVG_W - 12) + (Math.random() - 0.5) * 10;
+        const h  = 150 + Math.random() * 310;        /* 150 – 460 */
+        const ra = (Math.random() - 0.5) * 16;       /* natural lean –8…+8° */
+        const sw = 1.0 + Math.random() * 0.9;
+        const cf = (Math.random() - 0.5) * 0.35;     /* slight random curve */
+
+        /* Path in local space – base at (0,0), blade grows upward */
+        const a   = ra * Math.PI / 180;
+        const tx  =  Math.sin(a) * h,              ty  = -Math.cos(a) * h;
+        const c1x =  Math.sin(a * 0.2) * h * 0.28 + cf * h * 0.12;
+        const c1y = -Math.cos(a * 0.2) * h * 0.28;
+        const c2x =  Math.sin(a) * h * 0.72        + cf * h * 0.18;
+        const c2y = -Math.cos(a) * h * 0.72;
+
+        const g    = document.createElementNS(NS, 'g');
+        const path = document.createElementNS(NS, 'path');
+        path.setAttribute('d',
+          `M0,0 C${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${tx.toFixed(1)},${ty.toFixed(1)}`);
+        path.setAttribute('stroke', COLOR);
+        path.setAttribute('stroke-width', sw.toFixed(2));
+        path.setAttribute('stroke-linecap', 'round');
+        path.setAttribute('fill', 'none');
+        g.setAttribute('transform', `translate(${x.toFixed(1)},${BY})`);
+        g.appendChild(path);
+        svg.appendChild(g);
+        blades.push({ g, x, angle: 0, vel: 0 });
+      }
+
+      /* ── Wind state ── */
+      let waveX = -9999, waveDir = 0, waveStr = 0;
+      let globalWind = 0;
+      let svgRect = svg.getBoundingClientRect();
+      window.addEventListener('resize', () => { svgRect = svg.getBoundingClientRect(); });
+
+      document.addEventListener('mousemove', e => {
+        const r  = svgRect = svg.getBoundingClientRect();
+        const nx = (e.clientX - r.left) / r.width * SVG_W;
+        const vx = e.movementX;
+        if (Math.abs(vx) > 1) {
+          /* Start / refresh traveling wave at mouse position */
+          waveX   = nx;
+          waveDir = vx > 0 ? 1 : -1;
+          waveStr = Math.min(Math.abs(vx) * 1.5, 25);
+          globalWind += vx * 0.10;
+          globalWind  = Math.max(-20, Math.min(20, globalWind));
+        }
+      });
+
+      /* ── Physics constants ── */
+      const SPRING = 5.5;   /* return stiffness  */
+      const DAMP   = 0.86;  /* velocity damping  */
+      const WAVE_V = 420;   /* wave speed SVG-u/s */
+      let lastT = 0;
+
+      function tick(t) {
+        const dt = Math.min((t - lastT) / 1000, 0.04);
+        lastT = t;
+        const s = t * 0.001;
+
+        /* Global wind decays naturally */
+        globalWind *= 0.97;
+
+        /* Advance wave front and apply Gaussian impulse */
+        if (waveStr > 0.1) {
+          waveX  += waveDir * WAVE_V * dt;
+          waveStr = Math.max(0, waveStr - 5 * dt); /* linear decay ~5 s */
+          if (waveX < -250 || waveX > SVG_W + 250) waveStr = 0;
+
+          blades.forEach(b => {
+            const d   = b.x - waveX;
+            const inf = Math.exp(-(d * d) / (2 * 60 * 60)); /* σ=60 narrow pulse */
+            b.vel += waveDir * waveStr * inf * 0.24;
+          });
+        }
+
+        /* Per-blade physics */
+        blades.forEach(b => {
+          b.vel += globalWind * 0.006;
+          b.vel += Math.sin(s * 0.7 + b.x * 0.003) * 0.007; /* gentle ambient sway */
+          b.vel -= b.angle * SPRING * dt;                     /* spring back */
+          b.vel *= Math.pow(DAMP, dt * 60);                   /* damping */
+          b.angle += b.vel;
+          b.angle  = Math.max(-55, Math.min(55, b.angle));
+          b.g.setAttribute('transform',
+            `translate(${b.x.toFixed(1)},${BY}) rotate(${b.angle.toFixed(3)})`);
+        });
+
+        requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+    })();
   </script>
 </body>
 </html>
