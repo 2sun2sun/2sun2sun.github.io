@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>piece — image archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+KR:wght@300;400&family=Noto+Serif+KR:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="piece-body">
+
+  <header class="piece-header">
+    <a href="piece.html" class="piece-header-title">piece</a>
+    <a href="index.html" class="piece-header-home" aria-label="홈">home</a>
+  </header>
+
+  <main class="piece-main">
+    <section class="piece-intro">
+      <p class="piece-intro-label">Image Archive</p>
+      <p class="piece-intro-copy">작업 과정에서 수집한 이미지들을 조용히 모아두는 아카이브입니다. 이미지를 누르면 더 크게 자세히 볼 수 있습니다.</p>
+    </section>
+
+    <section class="piece-archive" aria-label="이미지 아카이브">
+      <button class="archive-item tall" type="button" data-image="image/snowooly/메인 이미지.jpg" data-code="P-01" data-title="Snowooly Main" data-credit="image archive">
+        <span class="archive-thumb"><img src="image/snowooly/메인 이미지.jpg" alt="Snowooly main archive item" /></span>
+        <span class="archive-meta"><span>P-01</span><span>Snowooly Main</span><span>image archive</span></span>
+      </button>
+
+      <button class="archive-item portrait" type="button" data-image="image/bite me/Untitled-4.jpg" data-code="P-02" data-title="Bite Me 01" data-credit="image archive">
+        <span class="archive-thumb"><img src="image/bite me/Untitled-4.jpg" alt="Bite Me archive item one" /></span>
+        <span class="archive-meta"><span>P-02</span><span>Bite Me 01</span><span>image archive</span></span>
+      </button>
+
+      <button class="archive-item portrait" type="button" data-image="image/bite me/Untitled-6.jpg" data-code="P-03" data-title="Bite Me 02" data-credit="image archive">
+        <span class="archive-thumb"><img src="image/bite me/Untitled-6.jpg" alt="Bite Me archive item two" /></span>
+        <span class="archive-meta"><span>P-03</span><span>Bite Me 02</span><span>image archive</span></span>
+      </button>
+
+      <button class="archive-item tall" type="button" data-image="image/snowooly/디저트1.jpg" data-code="P-04" data-title="Dessert 01" data-credit="image archive">
+        <span class="archive-thumb"><img src="image/snowooly/디저트1.jpg" alt="Dessert archive item one" /></span>
+        <span class="archive-meta"><span>P-04</span><span>Dessert 01</span><span>image archive</span></span>
+      </button>
+
+      <button class="archive-item wide" type="button" data-image="image/snowooly/디저트2.png" data-code="P-05" data-title="Dessert 02" data-credit="image archive">
+        <span class="archive-thumb"><img src="image/snowooly/디저트2.png" alt="Dessert archive item two" /></span>
+        <span class="archive-meta"><span>P-05</span><span>Dessert 02</span><span>image archive</span></span>
+      </button>
+
+      <button class="archive-item portrait" type="button" data-image="image/snowooly/디저트3.jpg" data-code="P-06" data-title="Dessert 03" data-credit="image archive">
+        <span class="archive-thumb"><img src="image/snowooly/디저트3.jpg" alt="Dessert archive item three" /></span>
+        <span class="archive-meta"><span>P-06</span><span>Dessert 03</span><span>image archive</span></span>
+      </button>
+
+      <button class="archive-item square" type="button" data-image="image/snowooly/디저트4.jpg" data-code="P-07" data-title="Dessert 04" data-credit="image archive">
+        <span class="archive-thumb"><img src="image/snowooly/디저트4.jpg" alt="Dessert archive item four" /></span>
+        <span class="archive-meta"><span>P-07</span><span>Dessert 04</span><span>image archive</span></span>
+      </button>
+
+      <button class="archive-item portrait" type="button" data-image="image/snowooly/디저트5.jpg" data-code="P-08" data-title="Dessert 05" data-credit="image archive">
+        <span class="archive-thumb"><img src="image/snowooly/디저트5.jpg" alt="Dessert archive item five" /></span>
+        <span class="archive-meta"><span>P-08</span><span>Dessert 05</span><span>image archive</span></span>
+      </button>
+
+      <button class="archive-item portrait" type="button" data-image="image/snowooly/디저트6.jpg" data-code="P-09" data-title="Dessert 06" data-credit="image archive">
+        <span class="archive-thumb"><img src="image/snowooly/디저트6.jpg" alt="Dessert archive item six" /></span>
+        <span class="archive-meta"><span>P-09</span><span>Dessert 06</span><span>image archive</span></span>
+      </button>
+    </section>
+  </main>
+
+  <div class="piece-lightbox" id="pieceLightbox" aria-hidden="true" onclick="closePieceLightboxOutside(event)">
+    <div class="piece-lightbox-dialog">
+      <button class="piece-lightbox-close" type="button" onclick="closePieceLightbox()" aria-label="닫기">close</button>
+      <div class="piece-lightbox-frame">
+        <img id="pieceLightboxImage" src="" alt="" />
+      </div>
+      <div class="piece-lightbox-meta">
+        <span id="pieceLightboxCode"></span>
+        <span id="pieceLightboxTitle"></span>
+        <span id="pieceLightboxCredit"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const pieceLightbox = document.getElementById('pieceLightbox');
+    const pieceLightboxImage = document.getElementById('pieceLightboxImage');
+    const pieceLightboxCode = document.getElementById('pieceLightboxCode');
+    const pieceLightboxTitle = document.getElementById('pieceLightboxTitle');
+    const pieceLightboxCredit = document.getElementById('pieceLightboxCredit');
+
+    document.querySelectorAll('.archive-item').forEach((item) => {
+      item.addEventListener('click', () => {
+        pieceLightboxImage.src = item.dataset.image;
+        pieceLightboxImage.alt = item.dataset.title;
+        pieceLightboxCode.textContent = item.dataset.code;
+        pieceLightboxTitle.textContent = item.dataset.title;
+        pieceLightboxCredit.textContent = item.dataset.credit;
+        pieceLightbox.classList.add('open');
+        pieceLightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closePieceLightbox() {
+      pieceLightbox.classList.remove('open');
+      pieceLightbox.setAttribute('aria-hidden', 'true');
+    }
+
+    function closePieceLightboxOutside(event) {
+      if (event.target === pieceLightbox) closePieceLightbox();
+    }
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closePieceLightbox();
+    });
+  </script>
+</body>
+</html>
